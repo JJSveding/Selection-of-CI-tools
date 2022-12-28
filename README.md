@@ -1,1 +1,1 @@
-# Coming soon
+# renovate-demo
