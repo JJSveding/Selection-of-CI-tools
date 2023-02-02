@@ -1,0 +1,5 @@
+isort
+pylint
+pre-commit
+numpy
+pandas
