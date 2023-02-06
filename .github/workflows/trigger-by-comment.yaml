@@ -1,4 +1,7 @@
 name: pull request comment
+on:
+  issue_comment:
+    types: [created, edited, deleted]
 jobs:
   sampleJob:
     name: Sample Job
