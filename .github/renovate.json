@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "reviewers": [
+    "jjSveding"
+  ],
+  "schedule": [
+    "before 3am on Monday"
+  ],
+  "timezone": "Europe/Stockholm"
+}
