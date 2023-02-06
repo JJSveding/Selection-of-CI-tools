@@ -4,8 +4,6 @@
 #
 #    pip-compile
 #
---extra-index-url https://nbm_client:5Dvtc0xNUq7@pypi.utsikt.ikeadt.net/simple
---trusted-host pypi.utsikt.ikeadt.net
 
 astroid==2.14.1
     # via pylint

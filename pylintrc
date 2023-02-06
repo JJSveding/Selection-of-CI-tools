@@ -195,7 +195,7 @@ redefining-builtins-modules=six.moves,past.builtins,future.builtins,builtins,io
 
 
 [FORMAT]
-
+# DEMO
 # Maximum number of characters on a single line.
 max-line-length=100
 
@@ -265,6 +265,7 @@ const-naming-style=UPPER_CASE
 # Regular expression matching correct constant names
 const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$
 
+#DEMO
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case
 
