@@ -1,0 +1,32 @@
+{
+    "sales": [
+        {
+            "country_code": "DK",
+            "sales_channel": "Store",
+            "store_number": 1,
+            "sales_value": 12000.00,
+            "bimonthly_period": "2022-1"
+        },
+        {
+            "country_code": "DK",
+            "sales_channel": "Store",
+            "store_number": 2,
+            "sales_value": 8000.00,
+            "bimonthly_period": "2022-1"
+        },
+        {
+            "country_code": "DK",
+            "sales_channel": "Online",
+            "store_number": 1,
+            "sales_value": 10000.00,
+            "bimonthly_period": "2022-2"
+        },
+        {
+            "country_code": "DK",
+            "sales_channel": "Online",
+            "store_number": 2,
+            "sales_value": 9000.00,
+            "bimonthly_period": "2022-2"
+        }
+    ]
+}
