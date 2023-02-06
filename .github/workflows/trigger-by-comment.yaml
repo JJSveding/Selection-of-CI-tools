@@ -4,7 +4,7 @@ on:
     types: [created, edited, deleted]
 jobs:
 job01:
-  if: ${{ github.event.issue.pull_request }}    # <--- The other way to compare if it's on a PR or on an issue
+  if: contains(github.event.comment.html_url, '/hello')
   runs-on: [ubuntu-latest]
   steps:
     - name: Test trigger
