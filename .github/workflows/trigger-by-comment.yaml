@@ -2,6 +2,9 @@ on:
   issue_comment:
     types: [created, deleted]
 
+env:
+  CI_DIR: Selection-of-CI-tools
+
 jobs:
   pr_commented:
     name: PR comment
@@ -13,12 +16,12 @@ jobs:
       with:
         repository: JJSveding/Selection-of-CI-tools
         token: ${{ secrets.MY_SECRET_CI_TOOLS }}
-        path: Selection-of-CI-tools
+        path: ${{ env.CI_DIR }}
 
     - name: Hello world
       run: |
         echo 'Hello world'
-        python src/my-bot.py --pr-number "$_PR_NUMBER"
+        python ${{ env.CI_DIR }}/src/my-bot.py --pr-number "$_PR_NUMBER"
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
