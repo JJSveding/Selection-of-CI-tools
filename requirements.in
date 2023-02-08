@@ -4,3 +4,5 @@ pre-commit
 numpy
 pandas
 pytest
+pygithub
+click
