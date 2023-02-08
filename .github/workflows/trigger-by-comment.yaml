@@ -1,0 +1,13 @@
+name: pull request comment
+on:
+  issue_comment:
+    types: [created, edited, deleted]
+jobs:
+  sampleJob:
+    name: Sample Job
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, '/test')"
+    steps:
+    - name: Test trigger
+      run: |
+        echo say hello
