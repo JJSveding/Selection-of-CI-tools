@@ -12,7 +12,7 @@ jobs:
     if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, '/test')
     runs-on: ubuntu-latest
     steps:
-    - name: Check-out devops repository
+    - name: Check-out CI repository
       uses: actions/checkout@v2
       with:
         repository: JJSveding/Selection-of-CI-tools
@@ -27,7 +27,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Print comment
       run: |
-        echo $_PR_NUMBER
+        echo $PR_NUMBER
         python src/cli.py print-changed-costs --pr-number "$PR_NUMBER"
       shell: sh
       env:
