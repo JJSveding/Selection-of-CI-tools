@@ -3,6 +3,6 @@ A repository created with the purpose of demoing a small selection of CI tools, 
 
 
 ### Readme files for each tool, which include setup details
-1. [Pre-commit](docs/pre-commit.md)
-2. [GitHub Actions](docs/github-actions.md)
-3. [Renovate Bot](docs/renovate-bot.md)
+1. [Pre-commit](docs/1.pre-commit.md)
+2. [GitHub Actions](docs/2.github-actions.md)
+3. [Renovate Bot](docs/3.renovate-bot.md)
