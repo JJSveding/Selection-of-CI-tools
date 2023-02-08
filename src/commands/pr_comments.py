@@ -18,5 +18,5 @@ def print_changed_costs(pr_number:int) -> None:
     gh_client = Github(os.environ["MY_SECRET_CI_TOOLS"])
     gh_repo = gh_client.get_repo('JJSveding/Selection-of-CI-tools')
     pr_obj = gh_repo.get_pull(pr_number)
-    pr_obj.create_issue_comment(body="Did my test work? :")
+    pr_obj.create_issue_comment(body="Did my test work? :O")
     print(type(gh_repo.get_readme()))
