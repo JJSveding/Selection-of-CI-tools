@@ -12,7 +12,7 @@ repos:
     rev: 'v2.16.1'
     hooks:
     - id: pylint
-      additional_dependencies: [pandas]
+      additional_dependencies: [pandas, click, pygithub]
       args: [ "--rcfile", "pylintrc" ]
 # Isort
 -   repo: https://github.com/pycqa/isort
