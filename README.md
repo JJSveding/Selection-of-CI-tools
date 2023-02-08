@@ -1,21 +1,8 @@
-# A selection of DevOps tools
+# A selection of Continuous Integration tools
+A repository created with the purpose of demoing a small selection of CI tools, which includes Pre-commit, GitHub Actions, and the Renovate Bot.
 
 
-## Pre-commit
-### Installation - https://pre-commit.com/
-```pip install pre-commit```
-
-### Add a pre-commit configuration
-```Create file .pre-commit-config```
-
-### Install the git hook script.
-(This command will make pre-commit autmatically run before every git commit)
-```pre-commit install```
-
-### Manually trigger pre-commit checks on all files.
-```pre-commit run --all-files```
-
-### Finding hooks
-#### Official hooks from pre-commit:
-https://github.com/pre-commit/pre-commit-hooks
-#### Otherwise, look
+# Readme files for each tool, which include setup details
+1. [Pre-commit](docs/pre-commit.md)
+2. [GitHub Actions](docs/github-actions.md)
+3. [Renovate Bot](docs/renovate-bot.md)ß
