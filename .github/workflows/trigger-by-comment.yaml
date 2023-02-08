@@ -21,7 +21,7 @@ jobs:
     - name: Hello world
       run: |
         echo $PWD
-        echo ls
+        ls
         python ${{ env.CI_DIR }}/src/my-bot.py --pr-number "$_PR_NUMBER"
       shell: sh
       env:
