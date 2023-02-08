@@ -27,7 +27,7 @@ jobs:
     - name: Print comment
       run: |
         echo ${{ github.event.issue.number }}
-        python src/cli.py print-changed-costs --pr-number "$PR_NUMBER"
+        python src/cli.py print-changed-costs --pr-number ${{ github.event.issue.number }}
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
