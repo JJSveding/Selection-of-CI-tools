@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo 'Hello world'
           python src/my-bot.py --pr-number "$_PR_NUMBER"
         env:
           credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
