@@ -21,7 +21,7 @@ jobs:
       run: |
         echo $PWD
         ls
-        python /src/cli.py print-changed-costs --pr-number "$_PR_NUMBER"
+        python src/cli.py print-changed-costs --pr-number "$_PR_NUMBER"
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
