@@ -26,7 +26,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Print comment
       run: |
-        echo ${{ github.event.number }}
+        echo ${{ github.event.issue.number }}
         python src/cli.py print-changed-costs --pr-number "$PR_NUMBER"
       shell: sh
       env:
