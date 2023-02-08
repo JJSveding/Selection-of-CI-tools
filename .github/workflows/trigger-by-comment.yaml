@@ -8,8 +8,17 @@ jobs:
     if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, '/test')
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo 'Hello world'
-          python src/my-bot.py --pr-number "$_PR_NUMBER"
-        env:
-          credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
+    - name: Check-out devops repository
+      uses: actions/checkout@v2
+      with:
+        repository: JJSveding/Selection-of-CI-tools
+        token: ${{ secrets.MY_SECRET_CI_TOOLS }}
+        path: Selection-of-CI-tools
+
+    - name: Hello world
+      run: |
+        echo 'Hello world'
+        python src/my-bot.py --pr-number "$_PR_NUMBER"
+      shell: sh
+      env:
+      credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
