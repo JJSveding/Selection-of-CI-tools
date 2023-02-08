@@ -21,7 +21,7 @@ jobs:
       run: |
         echo $PWD
         ls
-        python ${{ env.CI_REPO_DIR }}/src/my-bot.py --pr-number "$_PR_NUMBER"
+        python /src/my-bot.py --pr-number "$_PR_NUMBER"
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
