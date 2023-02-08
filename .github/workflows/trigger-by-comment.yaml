@@ -21,4 +21,4 @@ jobs:
         python src/my-bot.py --pr-number "$_PR_NUMBER"
       shell: sh
       env:
-      credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
+        credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
