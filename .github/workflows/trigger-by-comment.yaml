@@ -16,7 +16,6 @@ jobs:
       with:
         repository: JJSveding/Selection-of-CI-tools
         token: ${{ secrets.MY_SECRET_CI_TOOLS }}
-        path: ${{ env.CI_DIR }}
 
     - name: Hello world
       run: |
