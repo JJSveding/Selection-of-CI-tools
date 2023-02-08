@@ -3,13 +3,13 @@ on:
   issue_comment:
     types: [created, edited, deleted]
 jobs:
-  sampleJob:
-    name: Sample Job
-    runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, '/test')"
-    steps:
-    - name: Test trigger
-      env:
-        credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
-      run: |
-        python src/my-bot.py --pr-number "$_PR_NUMBER"
+sampleJob:
+if: ${{ github.event.issue.pull_request }}
+runs-on: [ubuntu-latest]
+steps:
+- name: trigger event
+if: contains(github.event.comment.body, '/test')
+env:
+  credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
+run: |
+  python src/my-bot.py --pr-number "$_PR_NUMBER"
