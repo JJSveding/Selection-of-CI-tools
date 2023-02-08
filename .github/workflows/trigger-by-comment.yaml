@@ -4,6 +4,7 @@ on:
 
 env:
   CI_REPO_DIR: Selection-of-CI-tools
+  PR_NUMBER: ${{ github.event.number }}
 
 jobs:
   pr_commented:
@@ -26,8 +27,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Print comment
       run: |
-        echo "$_PR_NUMBER"
-        python src/cli.py print-changed-costs --pr-number "$_PR_NUMBER"
+        echo $_PR_NUMBER
+        python src/cli.py print-changed-costs --pr-number "$PR_NUMBER"
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
