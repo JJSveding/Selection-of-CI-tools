@@ -9,5 +9,7 @@ jobs:
     if: "contains(github.event.head_commit.message, '/test')"
     steps:
     - name: Test trigger
+      env:
+        credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
       run: |
-        echo say hello
+        python src/my-bot.py --pr-number "$_PR_NUMBER"
