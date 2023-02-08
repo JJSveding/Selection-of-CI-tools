@@ -3,7 +3,7 @@ on:
     types: [created, deleted]
 
 env:
-  CI_DIR: Selection-of-CI-tools
+  CI_REPO_DIR: Selection-of-CI-tools
 
 jobs:
   pr_commented:
@@ -21,7 +21,7 @@ jobs:
       run: |
         echo $PWD
         ls
-        python ${{ env.CI_DIR }}/src/my-bot.py --pr-number "$_PR_NUMBER"
+        python ${{ env.CI_REPO_DIR }}/src/my-bot.py --pr-number "$_PR_NUMBER"
       shell: sh
       env:
         credentials: ${{ secrets.MY_SECRET_CI_TOOLS }}
