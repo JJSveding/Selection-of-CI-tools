@@ -8,7 +8,7 @@ env:
 jobs:
   pr_commented:
     name: PR comment
-    if: ${{ github.event.issue.pull_request }} && contains(github.event.comment.body, '/trigger-comment')
+    if: ${{ github.event.issue.pull_request }} && {{contains(github.event.comment.body, '/trigger-comment')}}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout CI repository
