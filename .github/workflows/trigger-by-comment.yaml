@@ -6,9 +6,9 @@ env:
   CI_REPO_DIR: Selection-of-CI-tools
 
 jobs:
+  if: ${{ github.event.issue.pull_request }} && {{contains(github.event.comment.body, '/trigger-comment')}}
   pr_commented:
     name: PR comment
-    if: ${{ github.event.issue.pull_request }} && {{contains(github.event.comment.body, '/trigger-comment')}}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout CI repository
