@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout CI repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
         with:
           repository: JJSveding/Selection-of-CI-tools
           token: ${{ secrets.MY_SECRET_CI_TOOLS }}
