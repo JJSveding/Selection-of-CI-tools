@@ -16,8 +16,7 @@ def pr_comments() -> None:
 @click.option("--pr-number", "pr_number", type=int, required=False)
 def print_changed_costs(pr_number:int) -> None:
 
-    # First create a Github instance:
-    # using an access token
+    # Create Github instance using an access token
     gh_client = Github(os.environ["credentials"])
     gh_repo = gh_client.get_repo('JJSveding/Selection-of-CI-tools')
     pr_obj = gh_repo.get_pull(pr_number)
