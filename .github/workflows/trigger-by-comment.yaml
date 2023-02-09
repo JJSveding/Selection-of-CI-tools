@@ -16,6 +16,7 @@ jobs:
         with:
           repository: JJSveding/Selection-of-CI-tools
           token: ${{ secrets.MY_SECRET_CI_TOOLS }}
+          ref: ${GITHUB_REF}
 
       - name: Set up Python
         uses: actions/setup-python@v4
