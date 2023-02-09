@@ -7,7 +7,7 @@ env:
 
 jobs:
   pr_commented:
-    if: ${{ github.event.issue.pull_request }} && ${{contains(github.event.comment.body, '/trigger-comment')}}
+    if: contains(github.event.comment.body, '/trigger-comment')
     name: PR comment
     runs-on: ubuntu-latest
     steps:
