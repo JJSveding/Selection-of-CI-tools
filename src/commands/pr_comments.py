@@ -22,7 +22,7 @@ def print_changed_costs(pr_number:int) -> None:
     gh_repo = gh_client.get_repo('JJSveding/Selection-of-CI-tools')
     pr_obj = gh_repo.get_pull(pr_number)
 
-    # Create random dataframe with data
+    # Create random dataframe
     d = {'previous_costs': np.random.randint(0,100,size=6), 'new_costs': np.random.randint(0,100,size=6)}
     df = pd.DataFrame(data=d)
     df['difference'] = ((df['new_costs'] - df['previous_costs']) / df['previous_costs']) * 100
