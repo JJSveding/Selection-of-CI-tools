@@ -33,7 +33,6 @@ jobs:
 
       - name: Print changed costs
         run: |
-          echo ${{GITHUB_REF}}
           python src/cli.py print-changed-costs --pr-number ${{ github.event.issue.number }}
         shell: sh
         env:
