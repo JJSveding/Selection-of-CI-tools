@@ -38,7 +38,7 @@ def print_changed_costs(pr_number:int) -> None:
 
 def _create_pr_body(table_markdown: str) -> str:
     content = "# PR change overview \n"
-    content += "This PR introduces new changes to the costs :OOOOO \n"
+    content += "This PR introduces new changes to the costs.\n"
     content += "<details>"
     content += "<summary><strong> Costs that has changed </strong>"
     content += "(click to show details)</summary>\n\n"
