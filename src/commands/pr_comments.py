@@ -22,7 +22,7 @@ def print_changed_costs(pr_number:int) -> None:
     gh_repo = gh_client.get_repo('JJSveding/Selection-of-CI-tools')
     pr_obj = gh_repo.get_pull(pr_number)
 
-    # Create random dataframe with data
+    # Create random dataframe to show
     d = {'previous_costs': np.random.randint(0,100,size=6), 'new_costs': np.random.randint(0,100,size=6)}
     df = pd.DataFrame(data=d)
     df['difference'] = ((df['new_costs'] - df['previous_costs']) / df['previous_costs']) * 100
@@ -38,7 +38,8 @@ def print_changed_costs(pr_number:int) -> None:
 
 
 def _create_pr_body(table_markdown: str) -> str:
-    content = "# PR change overview"
+    content = "# PR change overview \n"
+    content += "This PR introduces changes to the costs\n"
     content += "<details>"
     content += "<summary><strong> Costs that has changed </strong>"
     content += "(click to show details)</summary>\n\n"
