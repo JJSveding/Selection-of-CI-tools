@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout CI repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           repository: JJSveding/Selection-of-CI-tools
           token: ${{ secrets.MY_SECRET_CI_TOOLS }}
-          ref: ${{ github.ref }}
+          ref: ${GITHUB_REF}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,6 +30,7 @@ jobs:
 
       - name: Print changed costs
         run: |
+          echo '${GITHUB_REF}'
           python src/cli.py print-changed-costs --pr-number ${{ github.event.issue.number }}
         shell: sh
         env:
