@@ -46,6 +46,6 @@ def _create_pr_body(table_markdown: str) -> str:
     content += "\n\n **🚨 Significant changes detected. Investigate if they are expected.**"
     content += (
         "\n### Tasks\n- [ ] Tick here to confirm that you have "
-        "investigated and approved the above cost model results."
+        "investigated and approved the above cost changes"
     )
     return content
