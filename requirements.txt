@@ -65,7 +65,7 @@ pycparser==2.21
     # via cffi
 pygithub==1.57
     # via -r requirements.in
-pyjwt==2.6.0
+pyjwt==2.13.0
     # via pygithub
 pylint==2.16.1
     # via -r requirements.in
